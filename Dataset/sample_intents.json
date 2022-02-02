@@ -1,0 +1,404 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+     "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+     "context": [""]
+    },
+    {"tag": "identity",
+      "patterns": ["who are you?", "what are you", ""],
+      "responses": ["I am an AI Powered Chatbot , my work is to talk to you after analyzing what you have asked me and give you information about us."], 
+      "context": [""]
+      },
+      {"tag": "information",
+      "patterns": ["what is your work?", "what do you do here", "what is done here?"],
+      "responses": ["I am an AI Powered Chatbot, my work is to talk to you after analyzing what you have asked me. I can be programmed."], 
+      "context": [""]
+      },
+      {"tag": "time",
+      "patterns": ["what are your timings?", "when are you open?"],
+      "responses": ["I am available all the time for your service"], 
+      "context": [""]
+      },
+      {
+      "tag":"age",
+      "patterns": ["how old","how old are you?","what is your age","how old are you","age?"],
+      "responses":["I get reborn after every compilation","hey!","my owners are averagely 20 years!"],
+      "context": [""]
+      },
+      {
+        "tag":"common cold prevention",
+        "patterns":["What medicines can I buy to help me with my common cold?","tell me some prevention method from common cold","What should I eat or drink if i am suffering from common cold?","How can I keep from getting a cold or the flu?"],
+        "responses":["medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max, preventions that you must follow :Wash your hands,Avoid touching your face,Clean frequently used surfaces,Use hand sanitizers,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"],
+        "context": [""]
+        },
+        {
+        "tag":"fever prevention",
+        "patterns":["What medicines can I buy to help me with my fever?","tell me some prevention method from fever","What should I eat or drink if i am suffering from fever?","How can I keep from getting a fever?"],
+        "responses":["medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max, prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people.,SUGGESTED FOODS ARE:Garlic,Vitamin C–containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"],
+        "context": [""]
+        },
+        {
+        "tag":"diabetes prevention",
+        "patterns":["What medicines can I buy to help me with my diabetes?","tell me some prevention method from diabetes","What should I eat or drink if i am suffering from diabetes?","How can I keep from getting diabetes?"],
+        "responses":["medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor, prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You’re Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes,SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"],
+        "context": [""]
+        },
+        {
+        "tag":"depression prevention",
+        "patterns":["What medicines can I buy to help me with my depression?","tell me some prevention method from depression","What should I eat or drink if i am suffering from depression?","How can I keep from getting depression?"],
+        "responses":["medicines you can consume :  brexpiprazole, quetiapine,olanzapine, prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet,SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"],
+        "context": [""]
+        },
+        {
+        "tag":"asthma prevention",
+        "patterns":["What medicines can I buy to help me with my asthma?","tell me some prevention method from asthma","What should I eat or drink if i am suffering from asthma?","How can I keep from getting asthma?"],
+        "responses":["medicines you can consume : epinephrine,anticholinergic,Proair HFA, prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type,SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"],
+        "context": [""]
+        },
+        {
+        "tag":"Consultation",
+        "patterns": ["who should i contact for consultation?","is there any doctor available?","can you give me some suggestions for doctor consultations?","can you set up a meeting with a doctor for consultation?","is there any doctor available for consultation"],
+        "responses":["You can contact various doctors here for any kind of consultation: 1. https://www.1mg.com/online-doctor-consultation, 2. https://www.tatahealth.com/online-doctor-consultation/general-physician, 3. https://www.doconline.com/, or you can pay a visit to your local area doctor or family doctor."],
+        "context": [""]
+        },
+        {
+        "tag":"common cold symptoms",
+        "patterns": ["Runny or stuffy nose",
+        "Sore throat",
+        "Cough",
+        "Congestion",
+        "Slight body aches or a mild headache",
+        "Sneezing",
+        "Low-grade fever",
+        "Generally feeling unwell (malaise)"],
+        "responses":["It seems that you are suffering from common cold"],
+        "context": [""]
+        },
+        {
+        "tag":"fever symptoms",
+        "patterns":["Sweating",
+        "Chills and shivering",
+        "Headache",
+        "Muscle aches",
+        "Loss of appetite",
+        "Irritability",
+        "Dehydration",
+        "General weakness"],
+        "responses":["It seems that you are suffering from fever"],
+        "context": [""]
+        },
+        {
+        "tag":"Depression symptoms",
+        "patterns":["Hopeless outlook",
+        "Lost interest",
+        "Increased fatigue",
+        "sleep problem",
+        "Anxiety",
+        "change in weight",
+        "Looking at death"],
+        "responses":["It seem that you are suffering from depression"],
+        "context": [""]
+        },
+
+
+
+
+
+    {"tag": "COVID",
+        "patterns": ["experience fever, cough, and fatigue","difficulty breathing or mild pneumonia","severe pneumonia","Shortness of breath or difficulty breathing","Congestion or runny nose","Persistent pain or pressure in your chest","Positive RTPCR"],
+        "responses": ["These symptoms are very similar to that in COVID-19, you should get a RTPCR Test done as soon as possible. In case of difficulty in breathing, you should monitor your SPO2 regularly, you should take a paracetamol tablet like Dolo-650 for the fever and steam twice a day to help clear nasal and throat cavity.   "],
+        "context": [""]
+    },
+     {
+        "tag":"diabetes",
+        "patterns":[
+           "polyuria",
+           "polydypsia",
+           "shortness of breath",
+           "pain chest",
+           "asthenia",
+           "nausea",
+           "orthopnea",
+           "rale",
+           "sweat",
+           "sweating increased",
+           "unresponsiveness",
+           "mental status changes",
+           "vertigo",
+           "vomiting",
+           "labored breathing"],
+        "responses":[
+           
+           "It looks like you may have diabetes"],
+        "context": [""]
+     },
+     {
+        "tag":"hypertensive disease",
+        "patterns":[
+           "pain chest",
+           "shortness of breath",
+           "dizziness",
+           "asthenia",
+           "fall",
+           "syncope",
+           "vertigo",
+           "sweat",
+           "sweating increased",
+           "palpitation",
+           "nausea",
+           "angina pectoris",
+           "pressure chest"
+        ],
+        "responses":[
+           "It looks like you may have hypertensive disease",
+           "Choose healthy meal and snack options to help you avoid high blood pressure and its complications.",
+           "Be sure to eat plenty of fresh fruits and vegetables. Have a variety of foods rich in potassium, fiber, and protein and lower in salt (sodium) and saturated fat."
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"asthma",
+        "patterns":[
+           "wheezing",
+           "cough",
+           "shortness of breath",
+           "chest tightness",
+           "non-productive cough",
+           "pleuritic pain",
+           "productive cough",
+           "symptom aggravating factors",
+           "distress respiratory"
+        ],
+        "responses":[
+           
+           "It looks like you may have asthma",
+           "Stay away from smoke or any kind of general allergens.",
+           "consider taking immunotherapy allergy shots"
+
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"hypercholesterolemia",
+        "patterns":[
+           "pain",
+           "pain chest",
+           "sweat",
+           "sweating increased",
+           "nonsmoker",
+           "pressure chest",
+           "syncope",
+           "numbness",
+           "chest discomfort",
+           "shortness of breath",
+           "st segment depression",
+           "worry",
+           "t wave inverted",
+           "bradycardia",
+           "dyspnea"
+        ],
+        "responses":[
+           
+           "It looks like you may have hypercholesterolemia",
+           "Eat a low-salt diet that emphasizes fruits, vegetables and whole grains.",
+           "Limit the amount of animal fats and use good fats in moderation.",
+           "Lose extra pounds and maintain a healthy weight.",
+           "Quit smoking.",
+           "Exercise on most days of the week for at least 30 minutes.",
+           "Drink alcohol in moderation, if at all.",
+           "Manage stress. Take Care!"
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"infection urinary tract",
+        "patterns":[
+           "fever",
+           "dysuria",
+           "hematuria",
+           "renal angle tenderness",
+           "lethargy",
+           "asthenia",
+           "hyponatremia",
+           "hemodynamically stable",
+           "distress respiratory",
+           "difficulty passing urine",
+           "mental status changes",
+           "consciousness clear"
+        ],
+        "responses":[
+           
+           "It looks like you may have infection urinary tract",
+           "Drink plenty of liquids, especially water.",
+           "Consider taking probiotics"
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"anemia",
+        "patterns":[
+           "chill",
+           "guaiac positive",
+           "monoclonal",
+           "ecchymosis",
+           "tumor cell invasion",
+           "haemorrhage",
+           "pallor",
+           "asthenia",
+           "fatigue",
+           "heme positive",
+           "pain back",
+           "orthostasis",
+           "hyponatremia",
+           "dizziness",
+           "shortness of breath",
+           "pain",
+           "rhonchus",
+           "arthralgia",
+           "swelling",
+           "transaminitis" ],
+        "responses":[
+        
+           "It looks like you may have anemia",
+           "the normal level of vitamin b12 in the blood is 200-1000ng/l. the levels of methylmalonic acid are generally high during anemia due to a lack of vitamin b12 or folic acid. methylmalonic acid can also be checked with a urine test. most hmos cover diagnostic services when medically necessary and prescribed by a participating physician. check with your insurance provider for more detailed information about your coverage.",
+           "with every thing normal i dont think its is lupus and fibromyalgia fits the description. supportive care with pain killers is advised. low doses of tricyclic antidepressants work like charm. i hope it helps. take care"
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"chronic obstructive airway disease",
+        "patterns":[
+           "shortness of breath",
+           "wheezing",
+           "cough",
+           "dyspnea",
+           "distress respiratory",
+           "sputum purulent",
+           "hypoxemia",
+           "hypercapnia",
+           "patient non compliance",
+           "chest tightness"
+        ],
+        "responses":[
+           
+           "It looks like you may have chronic obstructive airway disease",
+           "Give up smoking. Giving up nicotine is one of the most important things you can do for your health.",
+            "Eat right and exercise. ",
+            "Get rest.",
+            "Take your medications correctly.",
+            "Use oxygen appropriately.",
+            "Retrain your breathing.",
+            "Avoid infections. Take care!"
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"dementia",
+        "patterns":[
+           "fever",
+           "fall",
+           "unresponsiveness",
+           "lethargy",
+           "agitation",
+           "ecchymosis",
+           "syncope",
+           "rale",
+           "unconscious state",
+           "cough",
+           "bedridden",
+           "bedridden",
+           "pain",
+           "facial paresis",
+           "abdominal tenderness",
+           "rhonchus",
+           "unsteady gait",
+           "hallucinations auditory"
+        ],
+        "responses":[
+           
+           "It looks like you may have dementia",
+           "Occupational therapy. An occupational therapist can show you how to make your home safer and teach coping behaviors. The purpose is to prevent accidents, such as falls; manage behavior and prepare you for the dementia progression.",
+           "Modifying the environment. Reducing clutter and noise can make it easier for someone with dementia to focus and function. You might need to hide objects that can threaten safety, such as knives and car keys. Monitoring systems can alert you if the person with dementia wanders.",
+           "Simplifying tasks. Break tasks into easier steps and focus on success, not failure. Structure and routine also help reduce confusion in people with dementia."
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"degenerative polyarthritis",
+        "patterns":[
+           "pain",
+           "food intolerance",
+           "numbness of hand",
+           "general discomfort",
+           "drowsiness",
+           "asthenia",
+           "nonsmoker",
+           "non-productive cough",
+           "polydypsia",
+           "stiffness",
+           "unsteady gait"
+        ],
+        "responses":[
+           "It looks like you may have degenerative polyarthritis",
+           "exercises to strengthen the muscles around your joint, increase your flexibility and reduce pain. Regular gentle exercise that you do on your own, such as swimming or walking, can be equally effective.",
+           "Transcutaneous electrical nerve stimulation (TENS). This uses a low-voltage electrical current to relieve pain. It provides short-term relief for some people with knee and hip osteoarthritis."
+        ],
+        "context": [""]
+     },
+     {
+        "tag":"hypothyroidism",
+        "patterns":[
+           "shortness of breath",
+           "prostatism",
+           "drowsiness",
+           "sleepy",
+           "hyponatremia",
+           "fall",
+           "unsteady gait",
+           "polyuria",
+           "hypotension",
+           "difficulty",
+           "syncope",
+           "nightmare",
+           "speech slurred",
+           "weight gain",
+           "asthenia",
+           "fatigue",
+           "tired",
+           "agitation",
+           "mental status changes",
+           "motor retardation",
+           "vomiting",
+           "numbness",
+           "mass of body structure"
+        ],
+        "responses":[
+           
+           "It looks like you may have hypothyroidism",
+           "In most cases, hypothyroidism is treated by replacing the amount of hormone that your thyroid is no longer making. This is typically done with a medication. One medication that is commonly used is called levothyroxine. Taken orally, this medication increases the amount of thyroid hormone your body produces, evening out your levels.",
+           "Hypothyroidism is a manageable disease. However, you will need to continuously take medication to normalize the amount of hormones in your body for the rest of your life. With careful management, and follow-up appointments with your healthcare provider to make sure your treatment is working properly, you can lead a normal and healthy life."
+        ],
+        "context": [""]
+     }
+]
+}
