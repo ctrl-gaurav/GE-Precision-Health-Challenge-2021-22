@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Chatbot</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='styles/style.css') }}"
+		/>
+		<!-- <link rel="stylesheet" href="../static/styles/style.css" /> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<!-- partial:index.partial.html -->
+		<section class="msger">
+			<header class="msger-header">
+				<svg
+					class="msger-header-back"
+					width="47"
+					height="47"
+					viewBox="0 0 47 47"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M30.1779 32.4888L21.2087 23.5L30.1779 14.5112L27.4166 11.75L15.6666 23.5L27.4166 35.25L30.1779 32.4888Z"
+						fill="black"
+					/>
+				</svg>
+				<div class="msger-header-title">
+					DocOnLine
+					<div>
+						<img class="logo" src="../static/styles/heart.png" alt="" />
+					</div>
+				</div>
+			</header>
+
+			<main class="msger-chat">
+				<div class="msg left-msg">
+					<div
+						class="msg-img"
+						style="background-image: url(../static/styles/doc.png)"
+					></div>
+
+					<div class="msg-bubble">
+						<div class="msg-info">
+							<div class="msg-info-name">Chatbot</div>
+							<div class="msg-info-time">12:45</div>
+						</div>
+
+						<div class="msg-text">
+							Hi, welcome to ChatBot! Go ahead and send me a message. 😄
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<form class="msger-inputarea">
+				<button type="submit" class="msger-attach-btn">
+					<svg
+						width="46"
+						height="45"
+						viewBox="0 0 46 45"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g clip-path="url(#clip0_96_5)">
+							<path
+								d="M31.985 17.298L25.8821 32.4034C24.7092 35.3062 21.4081 36.7075 18.5053 35.5346C15.6024 34.3618 14.2012 31.0607 15.374 28.1578L22.0077 11.739C22.74 9.92631 24.8055 9.04955 26.6182 9.78191C28.4308 10.5143 29.3076 12.5798 28.5752 14.3924L23.0029 28.1843C22.711 28.9067 21.8812 29.259 21.1587 28.9671C20.4363 28.6752 20.084 27.8453 20.3759 27.1229L25.4175 14.6445L23.4472 13.8485L18.4056 26.3269C17.6733 28.1395 18.55 30.205 20.3627 30.9374C22.1753 31.6697 24.2408 30.793 24.9732 28.9803L30.5455 15.1885C31.7183 12.2856 30.3171 8.98447 27.4142 7.81164C24.5113 6.63881 21.2102 8.04006 20.0374 10.9429L13.4037 27.3618C11.7904 31.3549 13.7162 35.8916 17.7092 37.5049C21.7023 39.1182 26.239 37.1925 27.8523 33.1994L33.9553 18.094L31.985 17.298Z"
+								fill="white"
+							/>
+						</g>
+						<defs>
+							<clipPath id="clip0_96_5">
+								<rect
+									width="34"
+									height="34"
+									fill="white"
+									transform="translate(13.4962 0.660522) rotate(22)"
+								/>
+							</clipPath>
+						</defs>
+					</svg>
+				</button>
+
+				<input
+					type="text"
+					class="msger-input"
+					id="textInput"
+					placeholder="Aa"
+				/>
+				<button type="submit" class="msger-send-btn">
+					<svg
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g clip-path="url(#clip0_96_8)">
+							<path
+								d="M13.4292 38.0382L31.7303 9.07917L-1.8638 15.7868L4.07111 24.4486L24.3132 14.1768L7.46955 29.3933L13.4292 38.0382Z"
+								fill="white"
+							/>
+						</g>
+						<defs>
+							<clipPath id="clip0_96_8">
+								<rect width="36" height="36" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</button>
+			</form>
+		</section>
+		<!-- partial -->
+		<script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+		<script>
+			const msgerForm = get(".msger-inputarea");
+			const msgerInput = get(".msger-input");
+			const msgerChat = get(".msger-chat");
+
+			// Icons made by Freepik from www.flaticon.com
+			const BOT_IMG = "../static/styles/doc.png";
+			const PERSON_IMG = "../static/styles/person.png";
+			const BOT_NAME = "    ChatBot";
+			const PERSON_NAME = "You";
+
+			msgerForm.addEventListener("submit", (event) => {
+				event.preventDefault();
+
+				const msgText = msgerInput.value;
+				if (!msgText) return;
+
+				appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+				msgerInput.value = "";
+				botResponse(msgText);
+			});
+
+			function appendMessage(name, img, side, text) {
+				//   Simple solution for small apps
+				const msgHTML = `
+                        <div class="msg ${side}-msg">
+                        <div class="msg-img" style="background-image: url(${img})"></div>
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                            <div class="msg-info-name">${name}</div>
+                            <div class="msg-info-time">${formatDate(
+															new Date()
+														)}</div>
+                            </div>
+                            <div class="msg-text">${text}</div>
+                        </div>
+                        </div>
+                        `;
+
+				msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+				msgerChat.scrollTop += 500;
+			}
+
+			function botResponse(rawText) {
+				// Bot Response
+				$.get("/get", { msg: rawText }).done(function (data) {
+					console.log(rawText);
+					console.log(data);
+					const msgText = data;
+					appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+				});
+			}
+
+			// Utils
+			function get(selector, root = document) {
+				return root.querySelector(selector);
+			}
+
+			function formatDate(date) {
+				const h = "0" + date.getHours();
+				const m = "0" + date.getMinutes();
+
+				return `${h.slice(-2)}:${m.slice(-2)}`;
+			}
+		</script>
+
+		<div class="upload-container">
+			<form id="upload-file" method="post" enctype="multipart/form-data">
+				<label for="imageUpload" class="upload-label"> Choose... </label>
+				<input
+					type="file"
+					name="file"
+					id="imageUpload"
+					accept=".png, .jpg, .jpeg"
+				/>
+			</form>
+
+			<div class="image-section" style="display: none">
+				<div class="img-preview">
+					<div id="imagePreview"></div>
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-lg" id="btn-predict">
+						Predict!
+					</button>
+				</div>
+			</div>
+
+			<div class="loader" style="display: none"></div>
+
+			<h3 id="result">
+				<span> </span>
+			</h3>
+		</div>
+	</body>
+
+	<footer>
+		<script
+			src="{{ url_for('static', filename='js/main.js') }}"
+			type="text/javascript"
+		></script>
+	</footer>
+</html>
