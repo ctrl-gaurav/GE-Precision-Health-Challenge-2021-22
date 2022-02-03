@@ -19,8 +19,8 @@
 <!-- <img src="./Mockups/Rectangle-1.png" style="padding-left: 1em; height: 15em;">
 <img src="./Mockups/Rectangle-2.png" style="padding-left: 1em; height: 15em;">
 <img src="./Mockups/Rectangle-3.png" style="padding-left: 1em; height: 15em;"> -->
-<img src="./Mockups/Rectangle-4.png" style="padding-left: 1em; height: 22.5em;">
-<img src="./Mockups/Rectangle.png" style="padding-left: 1em; height: 22.5em;">
+<img src="./Mockups/Rectangle-4.png" style="padding-left: 1em; height: 15em;">
+<img src="./Mockups/Rectangle.png" style="padding-left: 1em; height: 15em;">
 </div>
 
 <h1>❓ Problem Statement </h1>
