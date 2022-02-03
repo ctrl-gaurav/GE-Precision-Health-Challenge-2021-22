@@ -32,7 +32,8 @@ def home():
 def get_bot_response():
 
     text = request.args.get('msg')
-    return bot.chatbot_response(text, lemmatizer, intents, words, classes, model)
+    return 'You can also upload your chest X-ray if you have and our trained AI will detect what disease you are having'
+    # return bot.chatbot_response(text, lemmatizer, intents, words, classes, model)
 
 
 @app.route('/predict', methods=['GET', 'POST'])
