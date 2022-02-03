@@ -19,10 +19,11 @@ class run_model():
         x=np.expand_dims(x, axis=0)
         img_data=preprocess_input(x)
         classes=model.predict(img_data)
-        result=int(classes[0][0])
 
-        if result==0:
-            return "Person is Affected By PNEUMONIA"
-        else:
-            return "Result is Normal"
+        if classes[0][0]==1:
+            return "You're COVID-19 Postive"
+        elif classes[0][1] == 1:
+            return "No Worries. Your CXR is Normal"
+        elif classes[0][2] == 1:
+            return "You have Bacterial Pneumonia"
         
