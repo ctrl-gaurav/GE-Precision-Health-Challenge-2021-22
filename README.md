@@ -1,9 +1,42 @@
 # GE-Precision-Health-Challenge-2021-22
 
-<div style="display:flex; flex-direction: row;">
+<!-- <div style="display:flex; flex-direction: row;">
 <h1>DocOnLine</h1>
   <img src="./static/styles/heart.png" style="padding-left: 1em; height: 2.5em;">
-</div>
+</div> -->
+
+<br />
+<p align="center">
+  <a href="https://github.com/ctrl-gaurav/GE-Precision-Health-Challenge-2021-22">
+    <img src="./Mockups/DocOnLine.png" alt="Logo" width="480" height="270">
+  </a>
+
+  <h3 align="center">DocOnLine</h3>
+
+  <p align="center">
+    AI Powered Medical Chat Bot with Realtime Lung Abnormalities Screening in Radiography Images
+    <br />
+    <a href="https://github.com/ctrl-gaurav/GE-Precision-Health-Challenge-2021-22/blob/main/README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/ctrl-gaurav/GE-Precision-Health-Challenge-2021-22">View Demo</a>
+    ·
+    <a href="https://github.com/ctrl-gaurav/GE-Precision-Health-Challenge-2021-22/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ctrl-gaurav/GE-Precision-Health-Challenge-2021-22/issues">Request Feature</a>
+  </p>
+</p>
+
+
+[![Watch the video](<img src="./Mockups/DocOnLine.png" alt="Logo" width="960" height="540">)](https://youtu.be/E9CUDwkibi4)
+
+# Product Architecture
+
+<br />
+<p align="center">
+  <a href="https://github.com/ctrl-gaurav/GE-Precision-Health-Challenge-2021-22">
+    <img src="./Mockups/Architecture.jpg" alt="Logo" width="783" height="521">
+  </a>
 
 ## Mockups
 
