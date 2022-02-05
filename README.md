@@ -28,7 +28,7 @@
 </p>
 
 
-[![Watch the video](<img src="./Mockups/DocOnLine.png" alt="Logo" width="960" height="540">)](https://youtu.be/E9CUDwkibi4)
+[![Watch the video](https://img.youtube.com/vi/E9CUDwkibi4/maxresdefault.jpg)](https://youtu.be/E9CUDwkibi4)
 
 # Product Architecture
 
